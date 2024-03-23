@@ -1,43 +1,66 @@
 ---
-import AsideLinks from "./AsideLinks.astro"
-import CriaPlaylist from "./CriaPlaylist.astro"
-
+import AsideLinks from "./AsideLinks.astro";
+import CriaPlaylist from "./CriaPlaylist.astro";
 ---
 
 <aside class="w-[337px] space-y-3 flex flex-col">
-    <nav class="bg-zinc-900 p-6 rounded-md">
-        <div>
-            <img src="imgs/logo.png" alt="" class="w-20">
-        </div>
-        <div class="flex items-center gap-4  text-zinc-400 mt-4 font-bold hover:text-zinc-200 transition-colors">
-            <i class='bx bx-home-alt text-2xl'></i>
-            <h1>Inicio</h1>
-        </div>
-        <div class="flex items-center gap-4  text-zinc-400 mt-4 font-bold hover:text-zinc-200 transition-colors">
-            <i class='bx bx-search text-2xl'></i>
-            <h1>Procurar</h1>
-        </div>
-    </nav>
-    <div class="bg-zinc-900 py-4 rounded-md flex-1">
-        <header>
-            <div class="flex justify-between items-center text-zinc-400 font-bold px-4">
-                <div class="flex items-center gap-1 hover:text-zinc-200 transition-colors">
-                    <i class='bx bx-library text-3xl hover:bg-zinc-100 rounded-full p-2'></i>
-                    <span>A tua biblioteca</span>
-                </div>
-                <h1 class="text-4xl font-light hover:text-zinc-200 transition-colors pb-2">+</h1>
-            </div>
-        </header>
-        <div class="flex flex-col gap-3 h-36 overflow-y-auto scrollbar-thin scrollbar-thumb-zinc-500 scrollbar-track-zinc-900 scroll-p-5 p-1">
-            <CriaPlaylist h1="Cria a tua primeira playlist" p="É facil, nos ajudamos" btn="Criar playlist"/>
-            <CriaPlaylist h1="Vamos lá encontrar alguns podcasts para seguires" p="Vamos atualizar-te sobre os novos episódios" btn="Procurar Podcasts"/>
-        </div>
-        <AsideLinks/>
-        <div class="flex items-center justify-center border border-zinc-400 rounded-full gap-1 w-fit px-3 py-1 m-4
-        hover:scale-105 hover:border-white">
-            <i class='bx bx-globe'></i>
-            <h1 class="font-bold">Português</h1>
-        </div>
+  <nav class="bg-zinc-900 p-6 rounded-md">
+    <div>
+      <img src="imgs/logo.png" alt="" class="w-20" />
     </div>
+    <div
+      class="flex items-center gap-4 text-zinc-400 mt-4 font-bold hover:text-zinc-200 transition-colors"
+    >
+      <i class="bx bx-home-alt text-2xl"></i>
+      <h1>Inicio</h1>
+    </div>
+    <div
+      class="flex items-center gap-4 text-zinc-400 mt-4 font-bold hover:text-zinc-200 transition-colors"
+    >
+      <i class="bx bx-search text-2xl"></i>
+      <h1>Procurar</h1>
+    </div>
+  </nav>
+  <div class="bg-zinc-900 py-4 rounded-md flex-1 ">
+    <header class="">
+      <div
+        class="flex justify-between items-center text-zinc-400 font-bold px-4"
+      >
+        <div
+          class="flex items-center gap-1 hover:text-zinc-200 transition-colors"
+        >
+          <i class="bx bx-library text-3xl hover:bg-zinc-100 rounded-full p-2"
+          ></i>
+          <span>A tua biblioteca</span>
+        </div>
+        <h1
+          class="text-4xl font-light hover:text-zinc-200 transition-colors pb-2"
+        >
+          +
+        </h1>
+      </div>
+    </header>
+    <div
+      class="flex flex-col gap-3 h-36 overflow-y-auto scrollbar-thin scrollbar-thumb-zinc-500 scrollbar-track-zinc-900 scroll-p-5 p-1"
+    >
+      <CriaPlaylist
+        h1="Cria a tua primeira playlist"
+        p="É facil, nos ajudamos"
+        btn="Criar playlist"
+      />
+      <CriaPlaylist
+        h1="Vamos lá encontrar alguns podcasts para seguires"
+        p="Vamos atualizar-te sobre os novos episódios"
+        btn="Procurar Podcasts"
+      />
+    </div>
+    <AsideLinks />
+    <div
+      class="flex items-center justify-center border border-zinc-400 rounded-full gap-1 w-fit px-3 py-1 m-4 mb-0
+        hover:scale-105 hover:border-white"
+    >
+      <i class="bx bx-globe"></i>
+      <h1 class="font-bold">Português</h1>
+    </div>
+  </div>
 </aside>
-

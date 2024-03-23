@@ -1,33 +1,61 @@
 ---
-import Artistas from '../components/Artistas.astro'
-import Taylor from '../imgs/taylor.jfif'
-import Drake from '../imgs/drake.jfif'
-import Kw from '../imgs/kw.jfif'
-import Ts from '../imgs/ts.jfif'
+import Artistas from "../components/Artistas.astro";
+import Album from "../components/Album.astro";
 ---
 
-<main class="bg-zinc-900 flex-1 p-5 rounded-md ">
-    <header class="flex justify-between ">
-        <div class="space-x-2 text-3xl text-zinc-400">
-            <i class='bx bx-chevron-left rounded-full bg-zinc-950 '></i>
-            <i class='bx bx-chevron-right rounded-full bg-zinc-950 '></i>
-        </div>
-        <div class="space-x-3">
-            <a href="#" class="font-bold text-zinc-400 hover:text-zinc-100 transition-colors">Registrar-se</a>
-            <a href="#" class="bg-white text-black font-bold py-3 px-6 rounded-full hover:">Iniciar sessão</a>
-        </div>
-    </header>
-    <div class="mt-7">
-        <div class="flex items-center justify-between">
-            <a href="#" class="text-2xl font-bold hover:underline">Artistas populares</a>
-            <a href="#" class="text-sm font-bold text-zinc-400 hover:underline">Mostrar tudo</a>
-        </div>
-        <div class="grid grid-cols-6">
-            <Artistas image={Taylor} name='Taylor Swift'/>
-            <Artistas image={Drake} name='Drake'/>
-            <Artistas image={Kw} name='Kayne West'/>
-            <Artistas image={Ts} name='Travis Scott'/>
-            
-        </div>
+<main
+  class="bg-zinc-900 flex-1 p-5 rounded-md h-[650px]
+ overflow-y-auto scrollbar-thin scrollbar-thumb-zinc-500 scrollbar-track-zinc-900"
+>
+  <header class="flex justify-between">
+    <div class="space-x-2 text-3xl text-zinc-400">
+      <i class="bx bx-chevron-left rounded-full bg-zinc-950"></i>
+      <i class="bx bx-chevron-right rounded-full bg-zinc-950"></i>
     </div>
+    <div class="space-x-3">
+      <a
+        href="#"
+        class="font-bold text-zinc-400 hover:text-zinc-100 transition-colors"
+        >Registrar-se</a
+      >
+      <a
+        href="#"
+        class="bg-white text-black font-bold py-3 px-6 rounded-full hover:"
+        >Iniciar sessão</a
+      >
+    </div>
+  </header>
+  <div class="mt-7">
+    <div class="flex items-center justify-between">
+      <a href="#" class="text-2xl font-bold hover:underline"
+        >Artistas populares</a
+      >
+      <a href="#" class="text-sm font-bold text-zinc-400 hover:underline"
+        >Mostrar tudo</a
+      >
+    </div>
+    <div class="grid grid-cols-6">
+      <Artistas image="../imgs/taylor.jfif" name="Taylor Swift" />
+      <Artistas image="../imgs/kw.jfif" name="Kayne West" />
+      <Artistas image="../imgs/ts.jfif" name="Travis' Scott" />
+      <Artistas image="../imgs/taylor.jfif" name="Taylor Swift" />
+      <Artistas image="../imgs/kw.jfif" name="Kayne West" />
+      <Artistas image="../imgs/ts.jfif" name="Travis' Scott" />
+    </div>
+  </div>
+  <div class="mt-7">
+    <div class="flex items-center justify-between">
+      <a href="#" class="text-2xl font-bold hover:underline">Álbuns populares</a
+      >
+      <a href="#" class="text-sm font-bold text-zinc-400 hover:underline"
+        >Mostrar tudo</a
+      >
+    </div>
+    <div class="grid grid-cols-6">
+      <Album image="../imgs/taylor.jfif" name="Taylor Swift" />
+      <Album image="../imgs/taylor.jfif" name="Taylor Swift" />
+      <Album image="../imgs/kw.jfif" name="Kayne West" />
+      <Album image="../imgs/ts.jfif" name="Travis' Scott" />
+    </div>
+  </div>
 </main>
